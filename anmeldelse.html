@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RadarLive - Aarhus kulturscene</title>
+    <!--- SEO KEYWORDS DESCRIPTION-->
+    <meta
+      name="description"
+      content="RadarLive.dk er din guide til Aarhus
+    pulserende kulturscene. Udforsk spændende events, podcasts, blogs og bliv en
+    del af fællesskabet med #Venuehack eller som frivillig."
+    />
+    <meta
+      name="keywords"
+      content="Radar, RadarLive, , musik, kultur, events,
+    podcasts, blogs, artister, nykommende, kunst, events, Aarhus event,
+    frivillig arbejde, Venuehack, koncerter, kunstnere, kulturoplevelser,
+    feedback, fællesskab"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/bauhaus-93" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+  <body>
+    <!--navbar med logo og burgermenu-->
+ <nav class="nav-bar-flex">
+  <div id="myNav" class="overlay">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <div class="overlay-content">
+     <a href="index.html">FORSIDE</a>
+     <a href="deltag.html">DELTAG</a>
+     <a href="shows.html">SHOWS</a>
+     <a href="voresmedia.html">VORES MEDIA</a>
+     <a href="omradar.html">OM RADAR</a>
+   </div>
+ </div>
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    
+         <div class="logo">
+           <a href="index.html">
+             <img src="img/logo-radar-udenbaggrund-lille.png" alt="logo af radar"/>
+           </a>
+         </div>
+         <form>
+           <input type="search" name="search" class="search" placeholder="SØG">
+         </form>
+     </nav>
+     <section class="anmeldelse">
+      <div class="anmeldelse-box">
+          <form action="/action_page.php">
+
+              <p class="anmeldelse-text">
+                <label for="anmeldelse-input1">Skriv en anmeldelse:</label>
+              </p>
+              <input type="text" id="anmeldelse-input1" placeholder="Søg efter event.." required> 
+              <p class="anmeldelse-text">
+                <label for="anmeldelse-text1">Fortæl os mere!</label>
+              </p>
+              <textarea id="anmeldelse-text1" name="anmeldelse" rows="4" cols="50" maxlength="150" placeholder="Fortæl om din oplevelse. Hvad kunne du godt lide? Hvad kunne forbedres til næste gang?" required></textarea> 
+              <p class="anmeldelse-text">
+                <label for="anmeldelse-text2">Giv din anmeldelse en overskrift</label>
+              </p>
+              <textarea id="anmeldelse-text2" name="anmeldelse" rows="4" cols="50" maxlength="40" placeholder="Hvad skal fremhæves i din feedback?" required></textarea>
+              <p class="anmeldelse-text-datoemail"><label for="anmeldelse-email">Angiv Email og dato for oplevelsen</label>
+              </p>
+              <input type="email" id="anmeldelse-email" class="anmeldelse-email" placeholder="e-mail" required> 
+              <input type="date" id="anmeldelse-dato" class="anmeldelse-dato" required> 
+              <a href="takforanmeldelse.html" class="submit-button">Indsend</a> 
+          </form>
+      </div>
+     </section>
+    <footer>
+
+      <!--nyhedsbrev email formular-->
+
+      <div class="newsletter">
+        <form>
+          <h4>NYHEDSBREV</h4>
+          <p>Tilmeld dig vores nyhedsbrev for høre om nye shows</p>
+          <div class="form-group">
+          <input type="email" placeholder="Indtast din e-mail" required />
+          <button type="submit">Tilmeld</button>
+        </div>
+        </form>
+      </div>
+      <!--åbningstider-->
+      <div class="aabningstider">
+        <h3>ÅBNINGSTIDER</h3>
+        <p class="alleaabningstider">
+          Torsdag 19-23:30 <br>Fredag 19-23:30<br>Lørdag 19-23:30<br>Søndag - Onsdag Lukket <br>
+Adresse: Karen Wegeners Gade 6, 8000 Aarhus
+        </p>
+      </div>
+      <!--social media links til radar-->
+      <div>
+        <h4 class="socialtext">DEL DIN OPLEVELSE MED OS -</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/radarlive/"><img src="icons/icons-facebook.png" alt="facebook logo"/></a></li>
+          <li><a href="https://www.instagram.com/radarlive/?hl=en"><img src="icons/icons-instagram.png" alt="instagram logo"/></a></li>
+          <li><a href="https://www.youtube.com/channel/UCJrm6GyPt73ZSLJ7S34_XkA/videos"><img src="icons/icons-youtube.png" alt="youtube logo"/></a></li>
+          <li><a href="https://open.spotify.com/user/radarlive"><img src="icons/icons-spotify.png" alt="youtube logo"/></a></li>
+          
+        </ul>
+      </div>
+    </footer>
+    <script src="js/navigation.js"></script>
+    <script src="js/starrating.js"></script>
+  </body>
+</html>

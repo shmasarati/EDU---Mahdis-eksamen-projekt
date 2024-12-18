@@ -1,0 +1,970 @@
+/*global hele dokument*/
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #4b4155;
+  font-size: 1em;
+  font-family: "Roboto";
+
+}
+h2 {
+  font-family: 'bauhaus 93', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  color: #81d1d0;
+  padding: 1rem;
+}
+h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff8f18;
+  opacity: 0.5;
+  text-decoration: underline;
+}
+.search {
+  border-radius: 5px;
+  margin: 1rem 2rem 0 1rem;
+}
+h4 {
+  font-family: 'bauhaus 93', sans-serif;
+  font-size: 1.5rem;
+}
+
+/*<body> styling */
+.kommersnart {
+  font-size: 10rem;
+  color: violet;
+  font-family: 'bauhaus 93', sans-serif;
+}
+.responstekst {
+  font-family: 'roboto', sans-serif;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem 1rem;
+}
+.nav-bar-flex {
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #4b4155;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.nav-bar-flex .logo img {
+  width: 10rem;
+}
+
+.nav-bar-flex form {
+  margin-left: 20px;
+  align-self: center;
+  justify-content: center;
+}
+
+.leading {
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+.leading2 {
+  display: flex;
+  text-align: center;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'roboto', sans-serif;
+  color: white;
+}
+
+/*søgefelt styling*/
+input[type="text"] {
+  max-width: 75%;
+  box-sizing: border-box;
+  border: 2px solid #846c88;
+  border-radius: 15px;
+  font-size: 12px;
+  background-color: white;
+  background-position: 0.6rem 0.6rem;
+  background-repeat: no-repeat;
+  padding: 0.2rem 0 0.2rem 1.5rem;
+}
+
+/*hover effekt til overlay menu */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #df9749;
+  background: linear-gradient(to bottom, #40354b, #de9d6b);
+  overflow-x: hidden;
+  transition: 0.7s;
+}
+
+.overlay-content {
+  position: relative;
+  font-family: "bauhaus 93", sans-serif;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.overlay a {
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #81d1d0;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  opacity: 0.5;
+  color: #f48916;
+  text-decoration: underline;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #f48916;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+.btn:hover {
+  opacity: 0.5;
+  color: #000000;
+  cursor: pointer;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn2 {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #f48916;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+.btn2:hover {
+  opacity: 0.5;
+  color: #000000;
+  cursor: pointer;
+}
+
+.frivillig-section {
+  background-color: #352e3c;
+  text-align: center;
+}
+
+.frivillig {
+  text-align: center;
+}
+.frivillige {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.frivillige-billede {
+  width: 100%;
+  object-fit: contain;
+}
+.venuehack-section {
+  text-align: center;
+  padding: 0.5rem;
+}
+.venuehack-title {
+  color: #81d1d0;
+  font-family: "bauhaus 93", sans-serif;
+  font-size: 2rem;
+}
+.venuehack-section h1 {
+  color: #81d1d0;
+  font-family: "bauhaus 93", sans-serif;
+  font-size: 2rem;
+}
+.venuehack-button {
+  display: inline-block;
+  min-width: 15rem;
+  border-radius: 10px;
+  text-align: center;
+  background-image: linear-gradient(#59436f, #e58723);
+  color: white;
+  font-size: 1rem;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  margin: 0.5rem;
+}
+.venuehack-button:hover {
+  background-color: #b57837;
+  opacity: 0.5;
+  color: #3e3939;
+  cursor: pointer;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; 
+  padding: 10px; 
+  box-sizing: border-box;
+  max-width: 100%; 
+  overflow: hidden; 
+}
+
+
+/*footer styling - nyhedsbrev, social media icons */
+footer {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.aabningstider h3 {
+  color: #81d1d0;
+  font-family: "bauhaus 93", sans-serif;
+  font-size: 1rem;
+}
+.aabningstider p {
+  color: white;
+  font-size: 0.6rem;
+}
+.newsletter,
+.aabningstider,
+.socials {
+  text-align: left;
+}
+.newsletter {
+  flex: 1;
+  width: 100%;
+}
+.newsletter form {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  gap: 2%;
+}
+.newsletter h4 {
+  margin-bottom: 1%;
+  text-align: left;
+  font-family: "Bauhaus 93", sans-serif;
+  color: #81d1d0;
+  font-size: 1rem;
+}
+
+.newsletter p {
+  margin-bottom: 1%;
+  text-align: left;
+  font-size: 0.8em;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 0.625rem;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+}
+
+.newsletter button {
+  padding: 0.625rem 1.25rem;
+  background: #fe8300;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: "Roboto";
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.newsletter button:hover {
+  background-color: #e89741;
+  color: #535050;
+}
+.socials {
+  display: flex;
+  font-family: "bauhaus 93", sans-serif;
+  color: #81d1d0;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  min-width: 10rem;
+}
+.socials img {
+  max-width: 3rem;
+  min-width: 2.5rem;
+}
+.socialtext h1 {
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 1.5rem;
+}
+
+
+/*velkommen section styling */
+#welcome {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+}
+.welcome-text {
+  text-align: center;
+  padding: 0.5rem;
+  max-width: 35rem;
+  margin: 0 auto;
+  font-family: "Roboto";
+  color: #ffffff;
+}
+.welcome-text h2 {
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 2rem;
+  color: #81d1d0;
+}
+.welcome-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-img img {
+  max-width: 35vw;
+  padding: 1.2rem;
+}
+
+/*seneste blogs og kommende events styling*/
+#senesteblogs {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  background-color: #352e3c;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+#senesteblogs h2 {
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 2rem;
+  color: #81d1d0;
+  text-align: center;
+}
+#senesteblogs .blog a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  background: linear-gradient(to right, #000000, #a48a47, #ffb700);
+  color: white; 
+  padding: 10px;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 5px; 
+}
+
+.senesteblogs .blog a h3 {
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+#kommendeevents {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background-color: #4b4155;
+  gap: 1.5rem;
+  padding: 2rem;
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 1.5rem;
+  color: #81d1d0;
+  text-align: center;
+}
+.kommendeevents h3 {
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 2rem;
+  color: #81d1d0;
+  text-align: center;
+}
+#kommendeevents .blog a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: linear-gradient(to right, #000000, #b8860b, #f1af08);
+  color: white; 
+  padding: 10px;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#kommendeevents .blog a h3 {
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+#senesteblogs .blog a img,
+#kommendeevents .blog a img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 1%;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.blog a {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  text-align: center;
+}
+
+.blog a img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.blog a h3 {
+  font-family: "Roboto";
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+#senesteblogs .blog,
+#kommendeevents .blog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 0 auto;
+  max-width: 75%;
+}
+#senesteblogs2 h2 {
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 2rem;
+  color: #81d1d0;
+  text-align: center;
+}
+#senesteblogs2 .blog a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  background: linear-gradient(to right, #000000, #a48a47, #ffb700);
+  color: white; 
+  padding: 10px;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 5px; 
+}
+
+.senesteblogs2 .blog a h3 {
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+/* hover effekt til opslag*/
+#senesteblogs .blog a:hover,
+#kommendeevents .blog a:hover {
+  transform: scale(1.01); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#senesteblogs .blog a img,
+#kommendeevents .blog a img {
+  transition: transform 0.1s ease; 
+}
+
+#senesteblogs .blog a:hover img,
+#kommendeevents .blog a:hover img {
+  transform: scale(1.0); 
+}
+
+.frivillig h2 {
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 2rem;
+  color: #81d1d0;
+}
+
+/* shows / tidligere events */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem;
+  padding: 1.5rem;
+}
+.event-card {
+  background-color: #4b4155;
+  border: solid 1px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 2px 2px 4px 10px rgb(0, 0, 0);
+  opacity: 0.9;
+}
+
+.event-card h3 {
+  margin: 0.5rem 0;
+  font-family: 'roboto', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+.event-date {
+  text-decoration: line-through;
+}
+.stars span {
+  font-size: 2rem;
+  color: #000000; 
+  transition: color 0.8s;
+}
+
+.stars span:hover,
+.stars span.active {
+  color: #f6ff00;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*vores media styling*/
+.voresmedia-hero {
+  background-color: #352e3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.voresmedia-podcast h2 {
+  padding: 0.5rem; 
+  margin-bottom: 0.5rem;
+}
+
+.voresmedia-podcast .leading2 {
+  padding: 0.5rem; 
+  margin-top: 0;
+}
+
+.voresmedia-iframes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.vorestwoiframes iframe {
+  height: 15rem;
+  width: 100%;
+  border: none;
+}
+.socialemedia {
+  display: flex;
+  background-color: #352e3c;
+  padding: 2rem 2rem 2rem 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.socialtext {
+  color: #81d1d0;
+  padding: 0.3rem;
+}
+.socialtext1 {
+  font-family: "bauhaus 93" , sans-serif;
+  order: 3;
+  font-size: 2rem;
+  align-items: flex-end;
+  color: #81d1d0;
+}
+.leading3 {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+.social-icons {
+  gap: 1rem;
+  padding: 0;
+
+}
+.social-icons img {
+  width: 3rem;
+  height: 3rem;
+  gap: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+.social-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 2rem;
+}
+.social-text-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+}
+
+.socialtext1 {
+  font-family: "Bauhaus 93", sans-serif;
+  font-size: 2rem;
+  color: #81d1d0;
+  margin: 0;
+}
+/*Om Radar styling */
+#omos-hero-section {
+  background-color: #352e3c;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center; 
+}
+.omos-hero-section,
+.omos-section {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; 
+}
+
+.omos-herotext {
+  padding: 1rem;
+}
+.omos-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#omos-hero-section .omos-herotext {
+  max-width: 90%;
+  margin-bottom: 1rem;
+}
+
+#omos-hero-section img {
+  max-width: 100%;
+  height: auto; 
+  border-radius: 8px;
+}
+.accordion {
+  background-color: #90acec;
+  font-family: 'roboto', sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+.active, .accordion:hover {
+  background-color: #59436f;
+  text-decoration: underline;
+}
+
+.panel {
+  padding: 0 1rem;
+  background-color: white;
+  line-height: 2rem;
+  display: none;
+  overflow: hidden;
+}
+
+.anmeldelse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.anmeldelse-box {
+  border-image: linear-gradient(to right, #d995d1 0%, #b47bcd 100%) 1;
+  border-width: 0.5rem;
+  border-style: solid;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.anmeldelse-text {
+  color: white;
+  text-decoration: underline;
+  font-family: 'roboto', sans-serif;
+  font-size: 1.5rem;
+}
+textarea {
+  resize: none;
+  opacity: 0.9;
+  object-fit: fill;
+}
+.submit-button {
+  background-color: #f48916;
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #f48916;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem 0.5rem ;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.anmeldelse-text-datoemail {
+  text-decoration: underline;
+  font-size: 1rem;
+  color: white;
+}
+/* burgermenu media query til større skærme */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 1.2rem;
+  }
+  .overlay .closebtn {
+    font-size: 2rem;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* media query til tablet og op*/
+@media (min-width: 768px) {
+  #welcome {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+  .welcome-img img {
+    justify-self: end;
+  }
+/*  så footer ændre sig til row efter 768px*/
+  footer {
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+  .socials {
+    justify-content: flex-start;
+  }
+
+  .newsletter,
+  .aabningstider,
+  .socials {
+    text-align: left;
+  }
+
+  .aabningstider h3 {
+    font-size: 1.5rem;
+    font-family: "Bauhaus 93", sans-serif;
+    color: #81d1d0;
+  }
+
+  .socials ul {
+    justify-content: flex-start;
+  }
+  #senesteblogs {
+    text-align: left;
+  }
+  #senesteblogs .blog,
+  #kommendeevents .blog {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    min-width: 100%;
+  }
+  #senesteblogs .blog a img,
+  #kommendeevents .blog a img {
+    max-width: 95%;
+    padding: 0;
+  }
+  .frivillig {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .frivillige {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .frivillige-billede {
+    max-width: 18rem;
+    height: auto;
+    object-fit: contain;
+  }
+  .events-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .voresmedia-iframes {
+    flex-direction: row; 
+    gap: 1rem; 
+  }
+  .vorestwoiframes iframe {
+    width: 50%;
+    max-width: none;
+  }
+  .socialemedia {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .social-container {
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    text-align: left;
+  }
+  .socialtext {
+    text-align: left;
+  }
+  .social-icons {
+    display: flex;
+    order: 1;
+    justify-content: flex-start;
+  }
+  .socialtext1, .leading3 {
+    flex: 1;
+  }
+}
+
+/* media query til desktop */
+@media (min-width: 1024px) {
+  .aabningstider p {
+    font-size: 1rem;
+  }
+  .newsletter h4 {
+    font-size: 1.5rem;
+  }
+  .aabningstider h3 {
+    font-size: 1.5rem;
+  }
+  .overlay a {
+    font-size: 3.5rem;
+  }
+  .button-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .omos-hero-section {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; 
+    padding: 2rem;
+  }
+  .omos-hero-section .omos-herotext {
+    max-width: 50%;
+    order: 1; 
+    text-align: left;
+    flex: 1;
+    padding: 1rem;
+  }
+  .omos-hero-section .welcome-img {
+    order: 2;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  .omos-content {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+}
+  

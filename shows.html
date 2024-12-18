@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RadarLive - Aarhus kulturscene</title>
+    <!--- SEO KEYWORDS DESCRIPTION-->
+    <meta
+      name="description"
+      content="RadarLive.dk er din guide til Aarhus
+    pulserende kulturscene. Udforsk spændende events, podcasts, blogs og bliv en
+    del af fællesskabet med #Venuehack eller som frivillig."
+    />
+    <meta
+      name="keywords"
+      content="Radar, RadarLive, musik, kultur, events,
+    podcasts, blogs, artister, nykommende, kunst, Aarhus,
+    frivilligt arbejde, Venuehack, koncerter, kunstnere, oplevelser,
+    feedback, fællesskab"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/bauhaus-93" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!--body-->
+  <body>
+    <!--navbar med logo og burgermenu-->
+    <nav class="nav-bar-flex">
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="index.html">FORSIDE</a>
+          <a href="deltag.html">DELTAG</a>
+          <a href="shows.html">SHOWS</a>
+          <a href="voresmedia.html">VORES MEDIA</a>
+          <a href="omradar.html">OM RADAR</a>
+        </div>
+      </div>
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >&#9776;</span
+      >
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo-radar-udenbaggrund-lille.png" alt="logo af radar" />
+        </a>
+      </div>
+      <form>
+        <input type="search" name="search" class="search" placeholder="SØG" />
+      </form>
+    </nav>
+    <!--shows hero section-->
+    <section id="welcome" class="grid">
+      <div class="welcome-img">
+        <img src="img/shows-hero.jpg" alt="Radar koncert" />
+      </div>
+      <div class="welcome-text">
+        <h2 class="leading">
+          Her kan du udforske kommende og tidligere events
+        </h2>
+        <p class="leading">
+          Hold dig opdateret på kommende events, der bringer kunst og kultur til
+          scenen Gå på opdagelse i tidligere events for at se højdepunkter og
+          læse feedback fra publikum – måske finder du inspiration til din næste
+          oplevelse hos RadarLive
+        </p>
+      </div>
+    </section>
+    <!--shows kommende events section-->
+    <section id="senesteblogs">
+      <div class="blog grid">
+        <h2>Kommende events</h2>
+        <a href="https://radarlive.dk/kalender/2023/december/rock-med-lucia/">
+          <img src="img/forside-koncert.jpg" alt="lucia koncert radar" />
+          <h3>ROCK MED LUCIA</h3>
+        </a>
+        <a href="https://radarlive.dk/kalender/2024/december/clothing-club/">
+          <img
+            src="img/forside-koncert-reklame.jpg"
+            alt="Clothing club koncert"
+          />
+          <h3>
+            Clothing Club<br />
+            [Support: KRAMMER]
+          </h3>
+        </a>
+      </div>
+    </section>
+
+    <section class="events-section">
+      <h2 class="section-title">Tidligere events</h2>
+      <div class="events-container">
+        <div class="event-card">
+          <a href="https://radarlive.dk/kalender/2024/december/sorthandsk/">
+          <img src="img/shows-tidligere-show1.jpg" alt="SORTHANDSK" />
+          <h3>SORTHANDSK</h3>
+          <p>
+            Aarhus-baserede trio har brugt de seneste år på at færdiggøre to
+            sammenhængende ep'er...
+          </p>
+          <p class="event-date">Lørdag 7. december 2024</p>
+          </a>
+          <div class="rating">
+            <!--stjerne ratings med javascript-->
+            <span>Rating:</span>
+            <div class="stars" data-id="1">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <!--voting tæller-->
+            <div class="vote-counter" data-vote-count="0">Votes: 0</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <a href="https://radarlive.dk/kalender/2024/november/afsky-support-nvlvs/">
+          <img src="img/shows-tidligere-show-2.jpg" alt="Afsky" />
+          <h3>Afsky [SUPPORT: NVLVS]</h3>
+          <p>
+            Fuld plade på black metal sovset ind i vildskab, melankoli og sorg.
+          </p>
+          <p class="event-date">Lørdag 30. november 2024</p>
+          </a>
+          <div class="rating">
+            <!--stjerne ratings med javascript-->
+            <span>Rating:</span>
+            <div class="stars" data-id="1">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <!--voting tæller-->
+            <div class="vote-counter" data-vote-count="0">Votes: 0</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <a href="https://radarlive.dk/kalender/2024/november/nye-veje-vidensseminar-2024/">
+          <img src="img/Shows-tidligere-show-3.jpg" alt="Nye Veje Seminar" />
+          <h3>Nye Veje videns-seminar 2024 [GRATIS]</h3>
+          <p>
+            Det er gratis at deltage, men nødvendigt med tilmelding med email...
+          </p>
+          <p class="event-date">Tirsdag 19. november 2024</p>
+          </a>
+          <div class="rating">
+            <!--stjerne ratings med javascript-->
+            <span>Rating:</span>
+            <div class="stars" data-id="1">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <!--voting tæller-->
+            <div class="vote-counter" data-vote-count="0">Votes: 0</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <a href="https://radarlive.dk/kalender/2024/november/resavoir-us/">
+          <img src="img/Shows-tidligere-shows-4.jpg" alt="Resavoir" />
+          <h3>Resavoir (US)</h3>
+          <p>
+            Han har arbejdet med megastjerner og gæster nu Radar i eget navn
+            med...
+          </p>
+          <p class="event-date">Lørdag 30. november 2024</p>
+          </a>
+          <div class="rating">
+            <!--stjerne ratings med javascript-->
+            <span>Rating:</span>
+            <div class="stars" data-id="1">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <!--voting tæller-->
+            <div class="vote-counter" data-vote-count="0">Votes: 0</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer>
+      <!--nyhedsbrev email formular-->
+
+      <div class="newsletter">
+        <form>
+          <h4>NYHEDSBREV</h4>
+          <p>Tilmeld dig vores nyhedsbrev for høre om nye shows</p>
+          <div class="form-group">
+            <input type="email" placeholder="Indtast din e-mail" required />
+            <button type="submit">Tilmeld</button>
+          </div>
+        </form>
+      </div>
+      <!--åbningstider-->
+      <div class="aabningstider">
+        <h3>ÅBNINGSTIDER</h3>
+        <p class="alleaabningstider">
+          Torsdag 19-23:30 <br />Fredag 19-23:30<br />Lørdag 19-23:30<br />Søndag
+          - Onsdag Lukket <br />
+          Adresse: Karen Wegeners Gade 6, 8000 Aarhus
+        </p>
+      </div>
+      <!--social media links til radar-->
+      <div>
+        <h4 class="socialtext">DEL DIN OPLEVELSE MED OS -</h4>
+        <ul class="socials">
+          <li>
+            <a href="https://www.facebook.com/radarlive/"
+              ><img src="icons/icons-facebook.png" alt="facebook logo"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/radarlive/?hl=en"
+              ><img src="icons/icons-instagram.png" alt="instagram logo"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCJrm6GyPt73ZSLJ7S34_XkA/videos"
+              ><img src="icons/icons-youtube.png" alt="youtube logo"
+            /></a>
+          </li>
+          <li>
+            <a href="https://open.spotify.com/user/radarlive"
+              ><img src="icons/icons-spotify.png" alt="youtube logo"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/navigation.js"></script>
+    <script src="js/starrating.js"></script>
+  </body>
+</html>
